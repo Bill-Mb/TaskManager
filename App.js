@@ -1,24 +1,31 @@
+global.Intl = require('intl');
+
 import React from 'react';
-import { StyleSheet, Text, View, Button as NativeButton } from 'react-native';
-import { Button, ThemeProvider } from 'react-native-elements';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import { IntlProvider } from 'react-intl-redux';
+import { addLocaleData } from 'react-intl';
+import frLocale from 'react-intl/locale-data/fr';
+
+import RootLayout from './src/RootLayout';
+import reducers from './src/reducers';
+
+
+addLocaleData([...frLocale]);
+
+
 
 export default class App extends React.Component {
+
   render() {
+    const createStoreWithMiddleware = applyMiddleware()(createStore);
+
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app! Tata</Text>
-          <Button title="Hey!" />
-          <NativeButton title="Hey!" />
-      </View>
+      <Provider store={createStoreWithMiddleware(reducers)}>
+        <IntlProvider>
+          <RootLayout />
+        </IntlProvider>
+      </Provider>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

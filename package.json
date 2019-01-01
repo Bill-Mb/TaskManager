@@ -10,10 +10,16 @@
   },
   "dependencies": {
     "expo": "^31.0.2",
+    "intl": "^1.2.5",
     "react": "16.5.0",
+    "react-intl": "^2.7.2",
+    "react-intl-redux": "^2.1.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-elements": "^0.19.1",
-    "react-native-vector-icons": "^6.1.0"
+    "react-native-vector-icons": "^6.1.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
