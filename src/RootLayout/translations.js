@@ -7,8 +7,4 @@ export default defineMessages({
     id: `${moduleName}.welcome`,
     defaultMessage: "Open up App.js to start working on your app! Tata",
   },
-  text: {
-    id: `${moduleName}.text`,
-    defaultMessage: "Open up App.js to start working on your app! Tata",
-  },
 });
