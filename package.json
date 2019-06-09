@@ -9,6 +9,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.0.2",
+    "@material-ui/icons": "^4.0.1",
     "expo": "^31.0.2",
     "intl": "^1.2.5",
     "react": "16.5.0",
